@@ -1,0 +1,124 @@
+  /* Estilos para la cuadrícula */
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 10px;
+  }
+  
+  /* Estilos para los divs internos */
+  .grid-item {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Estilos para el div especial que ocupa 2 filas */
+  .double-height {
+    grid-row: span 2;
+  }
+
+  /* Estilos para los divs que ocupan 1 columna y 1 fila */
+  .single-row {
+    grid-column: span 1;
+  }
+
+  /* Estilos para el div que ocupa 2 columnas y 1 fila */
+  .double-width {
+    grid-column: span 2;
+  }
+
+
+
+
+
+
+  .card {
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: 200px 100px 80px;
+    grid-template-areas: "image" "text" "stats";
+    
+    border-radius: 18px;
+    
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
+    font-family: roboto;
+    text-align: center;
+  
+  
+    transition: 0.5s ease;
+    cursor: pointer;
+  
+    margin: 10px;
+  }
+  
+  /* Imagenes cards */
+  
+  #img1{
+  
+    background: url("/img/CATEDRAL1.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+  
+  }
+  
+  #img2{
+  
+    background: url("/img/MSR.jpg");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+  
+  }
+  
+  #img3{
+  
+    background: url("/img/PADRES-editada.png");
+    background-size: cover;
+    background-position-x: center;
+    background-position-y: center;
+  
+  }
+  
+  .card-image {
+    grid-area: image;
+    
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    background-size: cover;
+  }
+  
+  .card-text {
+    grid-area: stats;
+  /*
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.457);
+  */
+  
+  background-image: linear-gradient(to bottom, transparent, rgb(0, 0, 0));
+  
+  border-bottom-left-radius: 18px;
+  border-bottom-right-radius: 18px;
+  
+  }
+  .card-text .date {
+    color: rgb(255, 7, 110);
+    font-size:13px;
+  }
+  .card-text p {
+    color: rgb(226, 226, 226);
+    font-size:15px;
+    font-weight: 300;
+  }
+  .card-text h2 {
+    margin-top:0px;
+    font-size:28px;
+    color: rgb(255, 255, 255);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+  }
+  

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contadores Animados</title>
+</head>
+
+<style>
+
+#input-container {
+    width: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    transition: width 0.5s;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#campo-busqueda {
+    width: 200px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+</style>
+
+<body>
+
+  <button id="buscador">Mostrar Búsqueda</button>
+  <div id="input-container">
+      <input type="text" id="campo-busqueda" placeholder="Ingrese su búsqueda">
+  </div>
+  
+  <script src="script.js"></script>
+
+<script>
+
+const botonBuscador = document.getElementById('buscador');
+const inputContainer = document.getElementById('input-container');
+
+botonBuscador.addEventListener('click', () => {
+    if (inputContainer.style.width === '0px') {
+        inputContainer.style.width = '200px';
+    } else {
+        inputContainer.style.width = '0';
+    }
+});
+
+
+</script>
+</body>
+</html>
